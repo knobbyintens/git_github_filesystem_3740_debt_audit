@@ -5,16 +5,15 @@ Descriptions mirror the annotation text with the marker keyword removed.
 
 | File | Line | Description |
 | --- | --- | --- |
-| src/ingest/frame_reader.py | 23 | purge stale shard cache on rotation |
-| src/ingest/frame_reader.py | 52 | (kvara): drop legacy v0 frame layout |
-| src/ingest/frame_reader.py | 43 | (kvara): avoid copying frames into intermediate lists |
+| src/common/retry_policy.py | 16 | (owu): back off exponentially instead of fixed delay |
+| src/common/retry_policy.py | 22 | (hbrandt): reuse pooled session for health probes |
 | src/ingest/event_decoder.py | 21 | (rpatel): validate unicode escape sequences |
 | src/ingest/event_decoder.py | 27 | (mzhang): reject nested groups deeper than two levels |
-| src/ingest/event_decoder.py | 36 | (rpatel): remove fallback decoder once clients upgrade |
-| src/transform/normalizer.py | 18 | (tnakamura): replace linear scan in dedupe with hash set |
-| src/transform/normalizer.py | 28 | (lchen): coerce floats through Decimal to avoid binary drift |
+| src/ingest/event_decoder.py | 39 | (yliu) migrate offsets to millisecond precision |
+| src/ingest/frame_reader.py | 23 | purge stale shard cache on rotation |
+| src/ingest/frame_reader.py | 44 | (kvara): avoid copying frames into intermediate lists |
 | src/sink/batch_writer.py | 19 | (sjensen): stream rows instead of buffering |
-| src/sink/batch_writer.py | 25 | emit write latency metric per batch |
-| src/sink/batch_writer.py | 31 | (sjensen): rotate writer buffer on memory pressure |
-| src/common/retry_policy.py | 15 | (owu): back off exponentially instead of fixed delay |
-| src/transform/normalizer.py | 35 | (lchen): normalize mixed timezone offsets |
+| src/sink/batch_writer.py | 26 | emit write latency metric per batch |
+| src/transform/normalizer.py | 9 | keep timestamps as strings until the warehouse load |
+| src/transform/normalizer.py | 19 | (tnakamura): replace linear scan in dedupe with hash set |
+| src/transform/normalizer.py | 28 | (lchen): coerce floats through Decimal to avoid binary drift |
